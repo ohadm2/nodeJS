@@ -1,0 +1,13 @@
+Subjects:
+
+1. Anonymous Funcs.
+2. arr.map
+3. arr.reduce
+4. arr.filter
+5. promise-resolve
+6. promise-resolve-reject
+7. promise.then
+8. ES8 async-await
+9. node.js web server
+10. modules
+11. exports
