@@ -1,0 +1,24 @@
+{
+    "persons": [ 
+        {
+        "name" : "Moshe",
+        "age"  : "44",
+        "address" : 
+                {
+                    "city" : "Paris",
+                    "Country" : "France"
+                }
+        },
+
+        {
+            "name" : "David",
+            "age"  : "22",
+            "address" : 
+                {
+                    "city" : "Jerusalem",
+                    "Country" : "Israel"
+                }
+        }
+
+    ]
+}

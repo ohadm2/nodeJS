@@ -1,1 +1,5 @@
-"" 
+1. using our modules in other modules
+2. the 'fs' module
+3. npm init
+4. npm install
+5. npm 'fs-extra' module
