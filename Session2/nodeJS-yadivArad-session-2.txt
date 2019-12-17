@@ -5,3 +5,5 @@
 5. npm 'fs-extra' module
 6. npm 'jsonfile' module
 7. advanced async usage
+8. web services in general
+9. REST web services (get[get all / get by id], post, put[=update], delete)
