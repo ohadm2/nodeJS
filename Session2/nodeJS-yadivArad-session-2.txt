@@ -3,3 +3,5 @@
 3. npm init
 4. npm install
 5. npm 'fs-extra' module
+6. npm 'jsonfile' module
+7. advanced async usage
