@@ -7,3 +7,7 @@
 7. advanced async usage
 8. web services in general
 9. REST web services (get[get all / get by id], post, put[=update], delete)
+10. postman
+11. npm 'axios' module (http client)
+12. console.table() [print output as an ascii table]
+13. npm 'console.table' [print output as a pretty table]
