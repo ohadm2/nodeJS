@@ -56,25 +56,40 @@ exports.getUserAssignmentsFromWebService = function(userID)
 {
     var prom = new Promise(resolve =>
     {
-        var dataProm = this.getUserNameFromWebService(userID);
+        var dataProm = this.getUserNameAndEmailFromWebService(userID);
         
         dataProm.then(data =>
+        {
+            var name = data[0];
+
+            if(name.startsWith("E"))
             {
-                var name = data[0];
+                axios.default.get(webServiceTodosUrl).then(function (response) {
+                    var dataArr = response.data;
 
-                if(name.startsWith("E"))
-                {
-                    axios.default.get(webServiceUsersUrl + "/" + userID).then(function (response) {
-                        var dataArr = response.data;
+                    var thisUserOnlyAssignmentsArr = dataArr.filter(x => x.userId == userID);
 
-                        dataArr.filter
+                    var assignments = 
+                    {
+                        "name" : name,
+                        "userID" : userID,
+                        "assignments" : thisUserOnlyAssignmentsArr.filter(x => x.title)
+                    }
 
-                        resolve(assignments);
-                        
-                    });
-                }
+                    resolve(assignments);
+                });
             }
-        )       
+            else
+            {
+                var assignments = 
+                {
+                    "name" : name,
+                    "userID" : userID,
+                }
+
+                resolve(assignments);
+            }
+        })
     });
         
     return (prom);

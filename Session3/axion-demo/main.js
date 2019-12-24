@@ -19,11 +19,17 @@ var server = http.createServer(function (req, res) {
     });
     */
 
+    /*
     utils.getUserNameFromWebService(5).then(userName => {
         res.write(JSON.stringify(userName));
         res.end(); //end the response
     });
-   
+   */
+
+  utils.getUserAssignmentsFromWebService(2).then(userData => {
+    res.write(JSON.stringify(userData));
+    res.end(); //end the response
+    });
 })
 
 console.log("Running server on port " + port);

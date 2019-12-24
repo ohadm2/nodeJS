@@ -1,8 +1,8 @@
 Subjects:
 
 1. web service access via node using 'axion'
-2. 
-3. 
+2. nested promises
+3. express
 4. 
 5. 
 6. 
