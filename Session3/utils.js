@@ -25,13 +25,9 @@ exports.getUserNameAndEmailFromWebService = function(userID)
         axios.default.get(webServiceUsersUrl + "/" + userID).then(function (response) {
             var personData = response.data;
             var result = [];
-                    
-            personData.forEach(element => {
-                if(element == "name" || element == "email")
-                {
-                    result.push(element);
-                }
-            });
+
+            result.push(personData.name);
+            result.push(personData.email);
             
             resolve(result);
         });   
@@ -40,15 +36,17 @@ exports.getUserNameAndEmailFromWebService = function(userID)
     return (prom);
 }
 
-
-
-
 exports.getUserAssignmentsFromWebService = function(userID)
 {
     var prom = new Promise(resolve =>
     {
+        var dataProm = this.getUserNameAndEmailFromWebService(userID);
         
+        dataProm.then(data =>
+            resolve(data[0])
+        )
     });
         
     return (prom);
 }
+
