@@ -3,6 +3,7 @@ var json = require('jsonfile');
 
 
 var webServiceUsersUrl = "https://jsonplaceholder.typicode.com/users";
+var webServiceTodosUrl = "https://jsonplaceholder.typicode.com/todos";
 
 exports.getAllUserDetailsFromWebService = function(userID)
 {
@@ -36,7 +37,7 @@ exports.getUserNameAndEmailFromWebService = function(userID)
     return (prom);
 }
 
-exports.getUserAssignmentsFromWebService = function(userID)
+exports.getUserNameFromWebService = function(userID)
 {
     var prom = new Promise(resolve =>
     {
@@ -45,6 +46,35 @@ exports.getUserAssignmentsFromWebService = function(userID)
         dataProm.then(data =>
             resolve(data[0])
         )
+    });
+        
+    return (prom);
+}
+
+
+exports.getUserAssignmentsFromWebService = function(userID)
+{
+    var prom = new Promise(resolve =>
+    {
+        var dataProm = this.getUserNameFromWebService(userID);
+        
+        dataProm.then(data =>
+            {
+                var name = data[0];
+
+                if(name.startsWith("E"))
+                {
+                    axios.default.get(webServiceUsersUrl + "/" + userID).then(function (response) {
+                        var dataArr = response.data;
+
+                        dataArr.filter
+
+                        resolve(assignments);
+                        
+                    });
+                }
+            }
+        )       
     });
         
     return (prom);

@@ -19,7 +19,7 @@ var server = http.createServer(function (req, res) {
     });
     */
 
-    utils.getUserAssignmentsFromWebService(5).then(userName => {
+    utils.getUserNameFromWebService(5).then(userName => {
         res.write(JSON.stringify(userName));
         res.end(); //end the response
     });
