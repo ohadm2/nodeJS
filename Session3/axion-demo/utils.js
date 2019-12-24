@@ -69,11 +69,14 @@ exports.getUserAssignmentsFromWebService = function(userID)
 
                     var thisUserOnlyAssignmentsArr = dataArr.filter(x => x.userId == userID);
 
+                    // filter the output again to titles only
+                    thisUserOnlyAssignmentsArr = thisUserOnlyAssignmentsArr.map(x => x.title);
+
                     var assignments = 
                     {
                         "name" : name,
                         "userID" : userID,
-                        "assignments" : thisUserOnlyAssignmentsArr.filter(x => x.title)
+                        "assignments" : thisUserOnlyAssignmentsArr
                     }
 
                     resolve(assignments);
