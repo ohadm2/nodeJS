@@ -1,6 +1,14 @@
 echo "# nodeJS" >> README.md
 git init
 git add README.md
-git commit -m "first commit"
+git commit -m "added new code"
 git remote add origin https://github.com/ohadm2/nodeJS.git
+git push -u origin master
+
+
+
+set GIT_SSL_NO_VERIFY=true
+git status
+git add .
+git commit -m "added new code"
 git push -u origin master
