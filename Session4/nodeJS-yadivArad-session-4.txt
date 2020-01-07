@@ -1,8 +1,8 @@
 Subjects:
 
-1. express-generator
-2. 
-3. 
+1. npm install express-generator -g
+2. express <site-name-to-create> --ejs
+3. ejs engine vs the default jade engine
 4. 
 5. 
 6. 

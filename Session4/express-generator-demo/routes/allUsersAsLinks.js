@@ -4,9 +4,9 @@ var usersModel = require('../models/usersModel');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  usersModel.getAllUserNamesFromWebService().then(usersList => {
-    console.log(usersList);
-    res.render('users',{users: usersList});
+  usersModel.getAllUserNamesAndIDsFromWebService().then(usersListWithIDs => {
+    //console.log(usersListWithIDs);
+    res.render('allUsersAsLinks',{users: usersListWithIDs});
   });
 });
 

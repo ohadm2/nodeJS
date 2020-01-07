@@ -1,0 +1,13 @@
+<html>
+<body>
+    
+<h1>Users page as links</h1>
+    <% var numOfUsers = users.length; var i=0; %>
+    <% while(numOfUsers--)  { %>
+        <a href="/user/<%=users[numOfUsers][1]%>"><%= users[numOfUsers][0] %></a><br/>
+       
+    <% } %>
+
+
+</body>
+</html>
