@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <script>
+      function logout()
+      {
+        var xhttp = new XMLHttpRequest();
+
+        xhttp.open("GET", "/users/logout", false);
+        xhttp.send();
+
+        location.reload();
+      }
+
+    </script>
+
+    <h1>Welcome to the users page!</h1>
+    <br>
+    <br>
+    <button type="button" onclick="logout();">Logout</button>
+  </body>
+</html>
