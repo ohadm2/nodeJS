@@ -1,0 +1,26 @@
+
+                    {
+                        "firstName" : "Ronen",
+                        "lastName" : "Cohen",
+                        "age" : 34,
+                        "city" : "Tel Aviv"
+                    },
+                    {
+                        "firstName" : "Dana",
+                        "lastName" : "Levy",
+                        "age" :28,
+                        "city" : "Haifa"
+                    },
+                    {
+                        "firstName" : "Gil",
+                        "lastName" : "Nave",
+                        "age" : 30,
+                        "city" : "Tel Aviv"
+                    },
+                    {
+                        "firstName" : "Carmit",
+                        "lastName" : "Magen",
+                        "age" :41,
+                        "city" : "Haifa"
+                    }
+      
